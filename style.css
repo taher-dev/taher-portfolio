@@ -29,7 +29,7 @@
   --fs-400: 0.8rem;
 }
 }
-@media (max-width: 640px){
+@media (max-width: 664px){
   :root{
     --fs-600: 1.7rem;
     --fs-500: 0.8rem;
@@ -37,7 +37,7 @@
     --fs-400: 0.7rem;
   }
 }
-@media (max-width: 475px){
+@media (max-width: 520px){
   :root{
     --fs-600: 1rem;
     --fs-500: 0.6rem;
@@ -635,7 +635,7 @@ footer {
     max-width: 640px;
   }
   .main__intro {
-    margin-top: 3rem;
+    margin-top: 4rem;
   }
   .main__img img {
     width: 18rem;
@@ -693,12 +693,12 @@ footer {
 }
 
 /* sm */
-@media (max-width: 640px) {
+@media (max-width: 664px) {
   .container {
     max-width: 475px;
   }
   .main__intro {
-    margin-top: 2.5rem;
+    margin-top: 3.5rem;
   }
   .main__img img {
     width: 16rem;
@@ -741,9 +741,9 @@ footer {
 }
 
 /* extra breakpoint */
-@media (max-width: 576px) {
+@media (max-width: 592px) {
   .main__intro {
-    margin-top: 2.5rem;
+    /* margin-top: 2.5rem; */
     font-size: var(--fs-400);
   }
   .main__intro button {
@@ -756,7 +756,7 @@ footer {
 }
 
 /* xs */
-@media (max-width: 475px) {
+@media (max-width: 520px) {
   .container {
     width: 100%;
   }
@@ -765,15 +765,9 @@ footer {
     font-size: var(--fs-500);
     gap: 1.5rem;
   }
-  main {
-    padding-top: 5rem;
-  }
 
   .main__intro {
-    margin-top: 0.5rem;
-  }
-  .main__intro button {
-    margin-top: 0.5rem;
+    margin-top: 3rem;
   }
 
   .main__img img {
@@ -784,7 +778,7 @@ footer {
     font-size: var(--fs-500);
   }
   .skill__container {
-    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
     column-gap: 1rem;
   }
 
@@ -797,12 +791,13 @@ footer {
   .skill__card {
     border-radius: 15px;
     gap: 0.5rem;
-    padding: 2rem 0rem;
+    padding: 1.5rem 0rem;
     margin-top: 2rem;
     filter: drop-shadow(2px 3px 2px #363636ad);
   }
   
   .skill__card > img {
+    max-width: 3rem;
     margin-bottom: 0.8rem;
   }
   .skill__card p {
@@ -824,6 +819,34 @@ footer {
 textarea {
   width: 100%;
 }
+}
+
+@media (max-width: 448px) {
+  .main__intro {
+    /* font-size: 0.5rem; */
+    margin-top: 2rem;
+  }
+
+  .main__img img {
+    width: 10rem;
+  }
+}
+@media (max-width: 433px) {
+  .main__intro {
+    font-size: 0.5rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 335px) {
+  .main__intro {
+    margin-top: 0.5rem;
+  }
+  .main__intro button {
+    font-size: 0.4rem;
+    margin-top: 0.5rem;
+    border-radius: 0.3rem;
+  }
 }
 
 /* responsive end  */
