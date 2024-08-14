@@ -40,8 +40,8 @@
 @media (max-width: 520px){
   :root{
     --fs-600: 1rem;
-    --fs-500: 0.6rem;
-    --fs-450: 0.6rem;
+    --fs-500: 0.8rem;
+    --fs-450: 0.8rem;
     --fs-400: 0.6rem;
   }
 }
@@ -213,29 +213,23 @@ main {
   display: grid;
   grid-template-rows: subgrid;
   grid-row: span 2;
-  text-align: center;
-  justify-content: center;
+  align-items: center;
+  justify-items: center;
   gap: 1.5rem;
   padding: 2rem 0rem;
   margin-top: 2rem;
   filter: drop-shadow(2px 3px 2px #363636ad);
 }
 
-.skill__card > img {
+.skill__card img {
   margin-bottom: 0.8rem;
+  max-width: 5rem;
+  max-height: 5rem;
+  object-fit: contain;
 }
 .skill__card p {
   margin-top: auto;
 }
-.skill__container > div > img {
-  width: 5rem;
-}
-
-#figma__logo {
-  width: 30%;
-  margin: auto;
-}
-
 /* skill section end */
 
 /* projects section start  */
@@ -774,8 +768,11 @@ footer {
     width: 12rem;
     filter: drop-shadow(0px 7px 3px #0000005d);
   }
+  .main__intro button {
+    font-size: var(--fs-400);
+  }
   #skill {
-    font-size: var(--fs-500);
+    font-size: var(--fs-450);
   }
   .skill__container {
     grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
@@ -791,13 +788,15 @@ footer {
   .skill__card {
     border-radius: 15px;
     gap: 0.5rem;
-    padding: 1.5rem 0rem;
+    padding: 1.5rem 0rem; 
+    justify-content: center;
     margin-top: 2rem;
     filter: drop-shadow(2px 3px 2px #363636ad);
   }
   
-  .skill__card > img {
+  .skill__card img {
     max-width: 3rem;
+    max-height: 3rem;
     margin-bottom: 0.8rem;
   }
   .skill__card p {
