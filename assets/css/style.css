@@ -106,7 +106,7 @@
 
   --jet: hsl(0, 0%, 78%);
   --onyx: hsl(0, 0%, 90%);
-  --onyx-nav: hsl(0, 0%, 96%);
+  --onyx-nav: hsl(0, 0%, 96%, 0.75);
   --eerie-black-1: hsl(0, 0%, 94%);
   --eerie-black-2: hsl(240, 100%, 99%);
   --smoky-black: hsl(0, 0%, 100%);
