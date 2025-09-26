@@ -21,8 +21,11 @@ It is a fully responsive mobile first portfolio website, inspired by [codewithsa
 ## 🛠️ Setup Instructions
 
 1. **Clone the Repository**:
+
    ```bash
-   git clone https://github.com/taher-dev/Employee-Management-System.git
+
+   git clone https://github.com/taher-dev/taher-portfolio.git
+
    ```
 
 ## 📲 Contact Info
