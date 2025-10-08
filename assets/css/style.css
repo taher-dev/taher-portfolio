@@ -1031,6 +1031,11 @@ main {
   grid-template-columns: 1fr;
   gap: 30px;
   margin-bottom: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.project-list.fade-out {
+  opacity: 0;
 }
 
 .project-item {
@@ -1134,6 +1139,48 @@ main {
   color: var(--light-gray-70);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
+}
+
+/* Pagination Controls */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  background: var(--onyx);
+  color: var(--light-gray);
+  border: 1px solid var(--jet);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: var(--fs-7);
+  transition: var(--transition-1);
+  cursor: pointer;
+  min-width: 45px; /* ✅ Ensures consistent width */
+  height: 38px; /* ✅ Ensures consistent height */
+  display: inline-flex; /* ✅ Centers content */
+  align-items: center;
+  justify-content: center;
+  font-weight: 500; /* ✅ Makes text more uniform */
+}
+
+.page-btn:hover {
+  color: var(--orange-yellow-crayola);
+}
+
+.page-btn.active {
+  background: var(--orange-yellow-crayola);
+  color: var(--smoky-black);
+  border-color: var(--orange-yellow-crayola);
+}
+
+.page-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 /*-----------------------------------*\

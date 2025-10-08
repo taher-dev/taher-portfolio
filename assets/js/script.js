@@ -85,18 +85,6 @@ for (let i = 0; i < selectItems.length; i++) {
 // filter variables
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
-const filterFunc = function (selectedValue) {
-  for (let i = 0; i < filterItems.length; i++) {
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
-    } else {
-      filterItems[i].classList.remove("active");
-    }
-  }
-};
-
 // add event in all filter button items for large screen
 let lastClickedBtn = filterBtn[0];
 
@@ -131,3 +119,120 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
   });
 }
+
+/** ==============================
+ * PAGINATION FOR PROJECTS WITH FILTER
+ * ============================== */
+
+const allProjects = document.querySelectorAll(".project-item");
+const itemsPerPage = 9;
+let currentPage = 1;
+let currentFilter = "all";
+
+// Update the existing filter function to work with pagination
+const filterFunc = function (selectedValue) {
+  currentFilter = selectedValue;
+  currentPage = 1; // Reset to page 1 when filter changes
+
+  for (let i = 0; i < filterItems.length; i++) {
+    if (selectedValue === "all") {
+      filterItems[i].classList.add("active");
+    } else if (selectedValue === filterItems[i].dataset.category) {
+      filterItems[i].classList.add("active");
+    } else {
+      filterItems[i].classList.remove("active");
+    }
+  }
+
+  displayProjects(currentPage);
+};
+
+// Get filtered projects based on current filter
+function getFilteredProjects() {
+  if (currentFilter === "all") {
+    return Array.from(allProjects);
+  }
+
+  return Array.from(allProjects).filter((project) => {
+    const category = project.getAttribute("data-category");
+    return category === currentFilter;
+  });
+}
+
+// Display projects for current page and filter
+function displayProjects(page) {
+  const filteredProjects = getFilteredProjects();
+  const start = (page - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+
+  // Hide all projects first
+  allProjects.forEach((project) => {
+    project.style.display = "none";
+    project.classList.remove("active");
+  });
+
+  // Show only filtered and paginated projects
+  filteredProjects.forEach((project, index) => {
+    if (index >= start && index < end) {
+      project.style.display = "block";
+      project.classList.add("active");
+    }
+  });
+
+  updatePagination(filteredProjects.length);
+}
+
+// Update pagination controls
+function updatePagination(totalFilteredProjects) {
+  const paginationContainer = document.getElementById("pagination");
+  const totalPages = Math.ceil(totalFilteredProjects / itemsPerPage);
+  paginationContainer.innerHTML = "";
+
+  // Don't show pagination if only one page or no projects
+  if (totalPages <= 1) {
+    return;
+  }
+
+  // Previous button
+  const prevBtn = document.createElement("button");
+  prevBtn.textContent = "Prev";
+  prevBtn.className = "page-btn";
+  prevBtn.disabled = currentPage === 1;
+  if (prevBtn.disabled) prevBtn.classList.add("disabled");
+  prevBtn.addEventListener("click", () => changePage(currentPage - 1));
+  paginationContainer.appendChild(prevBtn);
+
+  // Page numbers
+  for (let i = 1; i <= totalPages; i++) {
+    const pageBtn = document.createElement("button");
+    pageBtn.textContent = i;
+    pageBtn.className = "page-btn";
+    if (i === currentPage) pageBtn.classList.add("active");
+    pageBtn.addEventListener("click", () => changePage(i));
+    paginationContainer.appendChild(pageBtn);
+  }
+
+  // Next button
+  const nextBtn = document.createElement("button");
+  nextBtn.textContent = "Next";
+  nextBtn.className = "page-btn";
+  nextBtn.disabled = currentPage === totalPages;
+  if (nextBtn.disabled) nextBtn.classList.add("disabled");
+  nextBtn.addEventListener("click", () => changePage(currentPage + 1));
+  paginationContainer.appendChild(nextBtn);
+}
+
+// Change page with animation
+const projectList = document.getElementById("project-list");
+function changePage(page) {
+  projectList.classList.add("fade-out");
+  setTimeout(() => {
+    currentPage = page;
+    displayProjects(currentPage);
+    projectList.classList.remove("fade-out");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, 300);
+}
+
+// Initialize on page load
+displayProjects(currentPage);
