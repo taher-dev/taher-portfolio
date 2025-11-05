@@ -106,26 +106,28 @@
 
   --jet: hsl(0, 0%, 78%);
   --onyx: hsl(0, 0%, 90%);
-  --onyx-nav: hsl(0, 0%, 96%, 0.75);
+  --onyx-nav: hsl(0, 0%, 98%);
   --eerie-black-1: hsl(0, 0%, 94%);
-  --eerie-black-2: hsl(240, 100%, 99%);
-  --smoky-black: hsl(0, 0%, 100%);
+  /* --eerie-black-2: hsl(240, 100%, 99%); */
+  --eerie-black-2: hsl(0, 0%, 95%);
+  /* --smoky-black: hsl(0, 0%, 100%); */
+  --smoky-black: hsl(0, 0%, 90%);
   --white-1: hsl(0, 0%, 0%);
   --white-2: hsl(0, 0%, 2%);
   --orange-yellow-crayola: hsl(41, 98%, 45%);
   --orange-yellow-crayola-2: hsl(45, 100%, 48%, 25%);
-  --vegas-gold: hsl(45, 73%, 57%);
+  --vegas-gold: hsl(41, 98%, 45%);
   --light-gray: hsl(0, 0%, 16%);
   --light-gray-70: hsla(0, 0%, 16%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
   /* shadow  */
 
-  --shadow-1: 0;
-  --shadow-2: 0;
-  --shadow-3: 0;
-  --shadow-4: 0;
-  --shadow-5: 0;
+  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.03);
+  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.08);
+  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.1);
+  --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.06);
+  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.08);
 
   /* Elements  */
 
@@ -1585,6 +1587,7 @@ main {
 
   .sidebar,
   article {
+    min-width: 290px;
     width: auto;
   }
 
