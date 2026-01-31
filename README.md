@@ -39,6 +39,8 @@ Live Website: [https://taher-portfolio.pages.dev](https://taher-portfolio.pages.
 >    
 > </aside>
 
+---
+
 A fully responsive mobile first portfolio website, inspired by [codewithsadee/vcard-personal-portfolio](https://github.com/codewithsadee/vcard-personal-portfolio).
 
 <p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
