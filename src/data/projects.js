@@ -45,7 +45,7 @@ export const projects = [
     id: 7,
     title: "3D Restaurant Model",
     category: "others",
-    image: "../assets/images/projects/project-7.jpg",
+    image: "src/assets/images/projects/project-7.jpg",
     link: "https://github.com/taher-dev/3D-restaurant-model-AutoCAD",
   },
 ];
