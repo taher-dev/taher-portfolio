@@ -1,5 +1,0 @@
-# ignore vscode settings folder
-.vscode/
-
-# Ignore .ini files
-*.ini
