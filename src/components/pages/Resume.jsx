@@ -1,3 +1,6 @@
+import pinicon from "../../assets/images/icon-pin-yellow.svg";
+import arrowicon from "../../assets/images/icon-top-right-arrow-light.svg";
+
 // ── Icon components ─────────────────────────────────────────────────────────
 
 const BriefcaseIcon = () => (
@@ -102,11 +105,7 @@ function TimelineItem({ title, date, org, location, bullets }) {
       <p className="timeline-item-p">
         <span dangerouslySetInnerHTML={{ __html: org }} />
         <span>
-          <img
-            className="timeline-item-icon"
-            src="/src/assets/images/icon-pin-yellow.svg"
-            alt="pin icon"
-          />
+          <img className="timeline-item-icon" src={pinicon} alt="pin icon" />
           {location}
         </span>
       </p>
@@ -138,11 +137,7 @@ function TimelineCertItem({ title, date, issuer, credUrl, bullets }) {
       <p className="timeline-item-p">
         {issuer}
         <a href={credUrl} target="_blank" rel="noreferrer">
-          <img
-            className="timeline-item-icon"
-            src="src/assets/images/icon-top-right-arrow-light.svg"
-            alt="link icon"
-          />
+          <img className="timeline-item-icon" src={arrowicon} alt="link icon" />
           Credentials
         </a>
       </p>
