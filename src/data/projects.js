@@ -40,7 +40,7 @@ export const projects = [
     title: "Tic Tac Toe",
     category: "web",
     image: project5,
-    link: "https://github.com/taher-dev/tic-tac-toe",
+    link: "https://tic-tac-toe-1bc.pages.dev/",
   },
   {
     id: 6,
