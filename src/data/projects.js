@@ -12,7 +12,7 @@ export const projects = [
     title: "Sundown Studio",
     category: "web",
     image: project1,
-    link: "https://github.com/taher-dev/Sundown-studio-clone",
+    link: "https://sundown-studio-clone-bcc.pages.dev/",
   },
   {
     id: 2,
