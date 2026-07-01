@@ -26,7 +26,7 @@ export const projects = [
     title: "Virtual Dice Roller",
     category: "web",
     image: project3,
-    link: "https://github.com/taher-dev/roll-dice",
+    link: "https://roll-dice-2to.pages.dev/",
   },
   {
     id: 4,
