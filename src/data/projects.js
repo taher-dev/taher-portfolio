@@ -6,6 +6,7 @@ import project5 from "../assets/images/projects/project-5.jpg";
 import project6 from "../assets/images/projects/project-6.jpg";
 import project7 from "../assets/images/projects/project-7.jpg";
 import project8 from "../assets/images/projects/project-8.webp";
+import project9 from "../assets/images/projects/project-9.webp";
 
 const projectList = [
   {
@@ -59,8 +60,8 @@ const projectList = [
   {
     title: "ThinkBoard",
     category: "web",
-    image: project8,
-    link: "https://github.com/taher-dev/Culinary-Canvas",
+    image: project9,
+    link: "https://github.com/taher-dev/thinkboard-mern/",
   },
 ];
 
