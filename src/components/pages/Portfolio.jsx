@@ -14,8 +14,12 @@ export default function Portfolio() {
   const [selectOpen, setSelectOpen] = useState(false);
   const [fading, setFading] = useState(false);
 
+  const sortedProjects = [...projects].sort((a, b) => b.id - a.id);
+
   const filtered =
-    filter === "all" ? projects : projects.filter((p) => p.category === filter);
+    filter === "all"
+      ? sortedProjects
+      : sortedProjects.filter((p) => p.category === filter);
 
   const totalPages = Math.ceil(filtered.length / PER_PAGE);
   const visible = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE);
