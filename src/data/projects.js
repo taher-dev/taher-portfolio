@@ -5,7 +5,7 @@ import project4 from "../assets/images/projects/project-4.jpg";
 import project5 from "../assets/images/projects/project-5.jpg";
 import project6 from "../assets/images/projects/project-6.jpg";
 import project7 from "../assets/images/projects/project-7.jpg";
-import project8 from "../assets/images/projects/project-8.png";
+import project8 from "../assets/images/projects/project-8.webp";
 
 export const projects = [
   {
