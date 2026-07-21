@@ -14,7 +14,7 @@ export default function Portfolio() {
   const [selectOpen, setSelectOpen] = useState(false);
   const [fading, setFading] = useState(false);
 
-  const sortedProjects = [...projects].sort((a, b) => b.id - a.id);
+  const sortedProjects = [...projects].reverse();
 
   const filtered =
     filter === "all"

@@ -7,61 +7,64 @@ import project6 from "../assets/images/projects/project-6.jpg";
 import project7 from "../assets/images/projects/project-7.jpg";
 import project8 from "../assets/images/projects/project-8.webp";
 
-export const projects = [
+const projectList = [
   {
-    id: 1,
-    title: "Sundown Studio",
-    category: "web",
-    image: project1,
-    link: "https://sundown-studio-clone-bcc.pages.dev/",
-  },
-  {
-    id: 2,
-    title: "Nike - Product Landing Page",
-    category: "web",
-    image: project2,
-    link: "https://github.com/taher-dev/nike-web-programming-project",
-  },
-  {
-    id: 3,
-    title: "Virtual Dice Roller",
-    category: "web",
-    image: project3,
-    link: "https://roll-dice-2to.pages.dev/",
-  },
-  {
-    id: 4,
-    title: "Employee Management System",
-    category: "software",
-    image: project4,
-    link: "https://github.com/taher-dev/Employee-Management-System",
-  },
-  {
-    id: 5,
-    title: "Tic Tac Toe",
-    category: "web",
-    image: project5,
-    link: "https://tic-tac-toe-1bc.pages.dev/",
-  },
-  {
-    id: 6,
-    title: "Student Management System",
-    category: "cli",
-    image: project6,
-    link: "https://github.com/taher-dev/student-management-system-C",
-  },
-  {
-    id: 7,
     title: "3D Restaurant Model",
     category: "others",
     image: project7,
     link: "https://github.com/taher-dev/3D-restaurant-model-AutoCAD",
   },
   {
-    id: 8,
+    title: "Student Management System",
+    category: "cli",
+    image: project6,
+    link: "https://github.com/taher-dev/student-management-system-C",
+  },
+  {
+    title: "Tic Tac Toe",
+    category: "web",
+    image: project5,
+    link: "https://tic-tac-toe-1bc.pages.dev/",
+  },
+  {
+    title: "Employee Management System",
+    category: "software",
+    image: project4,
+    link: "https://github.com/taher-dev/Employee-Management-System",
+  },
+  {
+    title: "Nike - Product Landing Page",
+    category: "web",
+    image: project2,
+    link: "https://github.com/taher-dev/nike-web-programming-project",
+  },
+  {
+    title: "Virtual Dice Roller",
+    category: "web",
+    image: project3,
+    link: "https://roll-dice-2to.pages.dev/",
+  },
+  {
+    title: "Sundown Studio",
+    category: "web",
+    image: project1,
+    link: "https://sundown-studio-clone-bcc.pages.dev/",
+  },
+  {
     title: "Culinary Canvas",
     category: "web",
     image: project8,
     link: "https://github.com/taher-dev/Culinary-Canvas",
   },
+  {
+    title: "ThinkBoard",
+    category: "web",
+    image: project8,
+    link: "https://github.com/taher-dev/Culinary-Canvas",
+  },
 ];
+
+export const projects = projectList.map((project, index) => ({
+  id: projectList.length - index,
+  ...project,
+}));
