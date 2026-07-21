@@ -58,7 +58,7 @@ const projectList = [
     link: "https://github.com/taher-dev/Culinary-Canvas",
   },
   {
-    title: "ThinkBoard",
+    title: "ThinkBoard - MERN",
     category: "web",
     image: project9,
     link: "https://github.com/taher-dev/thinkboard-mern/",
