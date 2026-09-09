@@ -71,7 +71,7 @@ const projectList = [
     image: project8,
     link: "https://github.com/taher-dev/Culinary-Canvas",
     description: "Interactive recipe discovery and food catalog with dynamic filtering.",
-    tags: ["React", "JavaScript", "CSS3"],
+    tags: ["React", "TypeScript", "Tailwind CSS"],
   },
   {
     title: "ThinkBoard - MERN",
@@ -79,7 +79,7 @@ const projectList = [
     image: project9,
     link: "https://github.com/taher-dev/thinkboard-mern/",
     description: "Full-stack collaborative digital board and task management platform.",
-    tags: ["MongoDB", "Express", "React", "Node.js"],
+    tags: ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
   },
 ];
 

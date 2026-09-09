@@ -616,7 +616,7 @@ article.active {
 \*-----------------------------------*/
 
 main {
-  margin: 15px 12px;
+  margin: 10px 12px;
   margin-bottom: 75px;
   min-width: 259px;
 }
@@ -1995,8 +1995,8 @@ article.about {
   /* MAIN */
 
   main {
-    margin-top: 60px;
-    margin-bottom: 100px;
+    margin-top: 25px;
+    margin-bottom: 80px;
   }
 
   /* SIDEBAR */
@@ -2374,12 +2374,12 @@ article.about {
 
   article.home,
   article.about {
-    padding-top: clamp(64px, 8.5vh, 90px);
-    padding-bottom: clamp(50px, 6.5vh, 75px);
+    padding-top: clamp(38px, 4.5vh, 52px);
+    padding-bottom: clamp(35px, 4.5vh, 50px);
   }
 
   .hero-section {
-    padding-top: clamp(28px, 4vh, 48px);
+    padding-top: clamp(8px, 1.2vh, 18px);
   }
 }
 
@@ -2429,6 +2429,8 @@ article.about {
 
   main {
     max-width: 1200px;
+    margin-top: 25px;
+    margin-bottom: 60px;
     margin-inline: auto;
     display: flex;
     justify-content: center;
@@ -2446,11 +2448,11 @@ article.about {
 
   .sidebar {
     position: sticky;
-    top: 60px;
+    top: 25px;
     max-height: max-content;
     height: 100%;
     margin-bottom: 0;
-    padding-top: 60px;
+    padding-top: 42px;
     z-index: 1;
   }
 
