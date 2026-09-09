@@ -134,11 +134,8 @@
     background: none;
   }
 
-  .sidebar,
-  article,
-  .navbar,
   .icon-box::before {
-    border: 0.1px solid var(--jet);
+    border: 1px solid var(--jet);
   }
 
   .timeline-item {
@@ -2343,15 +2340,13 @@ article.about {
     display: flex;
     align-items: center;
     gap: 15px;
-    border-radius: 0 24px;
+    border-radius: 0 24px 0 24px;
     padding: 0 25px;
     background: linear-gradient(135deg, rgba(28, 28, 34, 0.78) 0%, rgba(18, 18, 22, 0.9) 100%);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.09);
-    border-top: none;
-    border-right: none;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.12);
   }
 
   .navbar-list {
