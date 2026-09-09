@@ -93,15 +93,31 @@ export default function Portfolio() {
               data-filter-item
               data-category={project.category}
             >
-              <a href={project.link} target="_blank" rel="noreferrer">
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noreferrer"
+                className="project-card-link"
+              >
                 <figure className="project-img">
-                  <div className="project-item-icon-box">
-                    <ion-icon name="eye-outline" />
-                  </div>
                   <img src={project.image} alt={project.title} loading="lazy" />
                 </figure>
-                <h3 className="project-title">{project.title}</h3>
-                <p className="project-category">{project.category}</p>
+
+                <div className="project-content">
+                  <h3 className="project-title">{project.title}</h3>
+                  {project.description && (
+                    <p className="project-description">{project.description}</p>
+                  )}
+                  {project.tags && project.tags.length > 0 && (
+                    <ul className="project-tags">
+                      {project.tags.map((tag, idx) => (
+                        <li key={idx} className="project-tag-pill">
+                          {tag}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </a>
             </li>
           ))}
