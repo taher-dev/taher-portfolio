@@ -40,10 +40,10 @@ const InstagramIcon = () => (
 )
 
 const socials = [
-  { title: 'GitHub: @taher-dev',            href: 'https://github.com/taher-dev',                          Icon: GitHubIcon   },
-  { title: 'LinkedIn: @taher-mahmud-monmoy', href: 'https://www.linkedin.com/in/taher-mahmud-monmoy/',      Icon: LinkedInIcon },
-  { title: 'Facebook: @taher-mahmud-monmoy', href: 'https://www.facebook.com/monmoyzx',                     Icon: FacebookIcon },
-  { title: 'Instagram: @_red_uzumaki_',       href: 'https://www.instagram.com/_red_uzumaki_/',             Icon: InstagramIcon},
+  { title: 'GitHub: @taher-dev', href: 'https://github.com/taher-dev', Icon: GitHubIcon },
+  { title: 'LinkedIn: @taher-mahmud-monmoy', href: 'https://www.linkedin.com/in/taher-mahmud-monmoy/', Icon: LinkedInIcon },
+  { title: 'Facebook: @taher-mahmud-monmoy', href: 'https://www.facebook.com/monmoyzx', Icon: FacebookIcon },
+  { title: 'Instagram: @_red_uzumaki_', href: 'https://www.instagram.com/_red_uzumaki_/', Icon: InstagramIcon },
 ]
 
 export default function Sidebar() {
@@ -56,8 +56,8 @@ export default function Sidebar() {
         <ProfileModal />
 
         <div className="info-content">
-          <h1 className="name" title="Taher Mahmud">Taher Mahmud</h1>
-          <p className="title">Front-End Developer</p>
+          <h1 className="name" title="Taher Mahmud Monmoy">Taher Mahmud Monmoy</h1>
+          <p className="title">Software Developer</p>
         </div>
 
         <button

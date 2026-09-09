@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const NAV_ITEMS = ['about', 'resume', 'portfolio']
+const NAV_ITEMS = ['home', 'projects']
 
 // Moon icon (shown in dark mode → click to go light)
 const MoonIcon = () => (
@@ -40,19 +40,19 @@ export default function Navbar({ activePage, setActivePage, lightMode, setLightM
             </button>
           </li>
         ))}
-
-        <li className="navbar-item">
-          <button
-            id="theme-toggle"
-            onClick={handleThemeToggle}
-            className={`navbar-link${rotating ? ' rotate-icon' : ''}`}
-            aria-label="Toggle light/dark mode"
-          >
-            <MoonIcon />
-            <SunIcon />
-          </button>
-        </li>
       </ul>
+
+      <div className="navbar-theme-wrapper">
+        <button
+          id="theme-toggle"
+          onClick={handleThemeToggle}
+          className={`navbar-link${rotating ? ' rotate-icon' : ''}`}
+          aria-label="Toggle light/dark mode"
+        >
+          <MoonIcon />
+          <SunIcon />
+        </button>
+      </div>
     </nav>
   )
 }

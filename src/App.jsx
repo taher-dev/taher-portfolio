@@ -1,47 +1,46 @@
 import { useState, useEffect } from 'react'
+import SiteBackground from './components/Background/SiteBackground'
 import Sidebar from './components/Sidebar/Sidebar'
 import Navbar from './components/Navbar/Navbar'
-import About from './components/pages/About'
-import Resume from './components/pages/Resume'
+import Home from './components/pages/Home'
 import Portfolio from './components/pages/Portfolio'
 
 const PAGES = {
-  about: About,
-  resume: Resume,
+  home: Home,
   portfolio: Portfolio,
+  projects: Portfolio,
 }
 
 export default function App() {
-  const [activePage, setActivePage] = useState('about')
-  const [lightMode, setLightMode] = useState(
-    () => localStorage.getItem('lightMode') === 'active'
-  )
+  const [activePage, setActivePage] = useState('home')
+  const [lightMode, setLightMode] = useState(false)
 
-  // Sync light mode class + localStorage whenever it changes
+  // Sync light mode class whenever toggled
   useEffect(() => {
     if (lightMode) {
       document.body.classList.add('lightmode')
-      localStorage.setItem('lightMode', 'active')
     } else {
       document.body.classList.remove('lightmode')
-      localStorage.setItem('lightMode', null)
     }
   }, [lightMode])
 
   const PageComponent = PAGES[activePage]
 
   return (
-    <main>
-      <Sidebar />
-      <div className="main-content">
-        <Navbar
-          activePage={activePage}
-          setActivePage={setActivePage}
-          lightMode={lightMode}
-          setLightMode={setLightMode}
-        />
-        <PageComponent />
-      </div>
-    </main>
+    <>
+      <SiteBackground />
+      <main>
+        <Sidebar />
+        <div className="main-content">
+          <Navbar
+            activePage={activePage}
+            setActivePage={setActivePage}
+            lightMode={lightMode}
+            setLightMode={setLightMode}
+          />
+          <PageComponent setActivePage={setActivePage} />
+        </div>
+      </main>
+    </>
   )
 }
