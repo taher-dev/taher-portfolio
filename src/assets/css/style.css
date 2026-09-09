@@ -628,11 +628,14 @@ main {
   margin-bottom: 15px;
   max-height: 112px;
   overflow: hidden;
-  transition: var(--transition-2);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: max-height;
+  transition: max-height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .sidebar.active {
-  max-height: 405px;
+  max-height: 380px;
 }
 
 .sidebar-info {
@@ -862,7 +865,7 @@ main {
 .sidebar-info_more {
   opacity: 0;
   visibility: hidden;
-  transition: var(--transition-2);
+  transition: opacity 0.25s ease, visibility 0.25s ease;
 }
 
 .sidebar.active .sidebar-info_more {
@@ -2016,7 +2019,7 @@ article.about {
   }
 
   .sidebar.active {
-    max-height: 584px;
+    max-height: 410px;
   }
 
   .sidebar-info {
