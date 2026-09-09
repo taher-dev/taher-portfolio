@@ -1865,6 +1865,30 @@ article.about {
   border-color: rgba(255, 219, 112, 0.32);
 }
 
+/* Latest Projects on Home tab */
+.latest-projects-section {
+  margin-bottom: 28px;
+}
+
+.latest-projects-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 26px;
+}
+
+.latest-projects-btn-wrapper .btn-shiny {
+  cursor: pointer;
+  border-radius: 14px;
+}
+
+.latest-projects-btn-wrapper .shiny-text {
+  min-height: 44px;
+  padding: 10px 26px;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+}
+
 /* Pagination Controls */
 .pagination {
   display: flex;

@@ -6,8 +6,28 @@ import {
   awards,
   certifications,
 } from '../../data/resume'
+import { projects } from '../../data/projects'
 
 // ── Icon components ─────────────────────────────────────────────────────────
+
+const ProjectIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
+    <polygon points="12 2 2 7 12 12 22 7 12 2" />
+    <polyline points="2 17 12 22 22 17" />
+    <polyline points="2 12 12 17 22 12" />
+  </svg>
+)
 
 const BriefcaseIcon = () => (
   <svg
@@ -176,7 +196,9 @@ function TimelineCertItem({ title, date, issuer, credUrl }) {
 
 // ── Home page (Merged About + Resume) ─────────────────────────────────────────
 
-export default function Home() {
+export default function Home({ setActivePage }) {
+  const latestProjects = [...projects].reverse().slice(0, 3)
+
   return (
     <article className="home active" data-page="home">
       {/* Hero Section */}
@@ -225,6 +247,74 @@ export default function Home() {
           />
         ))}
       </TimelineSection>
+
+      <div className="separator" />
+
+      {/* Latest Projects */}
+      <section className="timeline latest-projects-section">
+        <div className="title-wrapper">
+          <div className="icon-box">
+            <ProjectIcon />
+          </div>
+          <h3 className="h3">Latest Projects</h3>
+        </div>
+
+        <ul className="project-list">
+          {latestProjects.map((project) => (
+            <li
+              key={project.id}
+              className="project-item active"
+              data-filter-item
+              data-category={project.category}
+            >
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noreferrer"
+                className="project-card-link"
+              >
+                <figure className="project-img">
+                  <img src={project.image} alt={project.title} loading="lazy" />
+                </figure>
+
+                <div className="project-content">
+                  <h3 className="project-title">{project.title}</h3>
+                  {project.description && (
+                    <p className="project-description">{project.description}</p>
+                  )}
+                  {project.tags && project.tags.length > 0 && (
+                    <ul className="project-tags">
+                      {project.tags.map((tag, idx) => (
+                        <li key={idx} className="project-tag-pill">
+                          {tag}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <div className="latest-projects-btn-wrapper">
+          <button
+            type="button"
+            className="btn btn-secondary btn-shiny"
+            onClick={() => {
+              if (setActivePage) {
+                setActivePage('projects')
+              }
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+            }}
+          >
+            <span className="shiny-text">
+              <span>All Projects</span>
+              <span className="btn-arrow">→</span>
+            </span>
+          </button>
+        </div>
+      </section>
 
       <div className="separator" />
 
