@@ -75,7 +75,12 @@ export default function Portfolio() {
           <ul className="select-list">
             {CATEGORIES.map((cat) => (
               <li key={cat} className="select-item">
-                <button onClick={() => handleFilter(cat)}>{label(cat)}</button>
+                <button
+                  className={filter === cat ? "active" : ""}
+                  onClick={() => handleFilter(cat)}
+                >
+                  {label(cat)}
+                </button>
               </li>
             ))}
           </ul>
