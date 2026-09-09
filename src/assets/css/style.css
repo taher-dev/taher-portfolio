@@ -816,16 +816,24 @@ main {
 
 .info_more-btn {
   position: absolute;
-  top: -15px;
-  right: -15px;
-  border-radius: 0 15px;
+  top: -18px;
+  right: -18px;
+  border-radius: 0 24px 0 15px;
   font-size: 13px;
   color: var(--orange-yellow-crayola);
   background: var(--border-gradient-onyx);
-  padding: 10px;
+  padding: 10px 12px;
   box-shadow: var(--shadow-2);
   transition: var(--transition-1);
   z-index: 1;
+}
+
+.info_more-btn ion-icon {
+  transition: transform var(--transition-1);
+}
+
+.sidebar.active .info_more-btn ion-icon {
+  transform: rotate(180deg);
 }
 
 .info_more-btn::before {
@@ -2033,7 +2041,8 @@ article.about {
   .info_more-btn {
     top: -30px;
     right: -30px;
-    padding: 10px 15px;
+    padding: 10px 18px;
+    border-radius: 0 24px 0 15px;
   }
 
   .info_more-btn span {
