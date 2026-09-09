@@ -71,55 +71,57 @@ export default function Sidebar() {
       </div>
 
       <div className="sidebar-info_more">
-        <div className="separator" />
+        <div className="sidebar-info_more-inner">
+          <div className="separator" />
 
-        <ul className="contacts-list">
-          <li className="contact-item">
-            <div className="icon-box">
-              <ion-icon name="location-outline" />
-            </div>
-            <div className="contact-info">
-              <p className="contact-title">Location</p>
-              <address>Dhaka, Bangladesh</address>
-            </div>
-          </li>
-
-          <li className="contact-item">
-            <div className="icon-box">
-              <ion-icon name="mail-outline" />
-            </div>
-            <div className="contact-info">
-              <p className="contact-title">Email</p>
-              <a href="mailto:monmoyzx@gmail.com" className="contact-link hov-yellow">
-                monmoyzx@gmail.com
-              </a>
-            </div>
-          </li>
-
-          <li className="contact-item">
-            <div className="icon-box">
-              <ion-icon name="phone-portrait-outline" />
-            </div>
-            <div className="contact-info">
-              <p className="contact-title">Phone</p>
-              <a href="tel:+8801868983398" className="contact-link hov-yellow">
-                +880 1868-983398
-              </a>
-            </div>
-          </li>
-        </ul>
-
-        <div className="separator" />
-
-        <ul className="social-list">
-          {socials.map(({ title, href, Icon }) => (
-            <li key={title} className="social-item">
-              <a title={title} href={href} target="_blank" rel="noreferrer" className="social-link">
-                <Icon />
-              </a>
+          <ul className="contacts-list">
+            <li className="contact-item">
+              <div className="icon-box">
+                <ion-icon name="location-outline" />
+              </div>
+              <div className="contact-info">
+                <p className="contact-title">Location</p>
+                <address>Dhaka, Bangladesh</address>
+              </div>
             </li>
-          ))}
-        </ul>
+
+            <li className="contact-item">
+              <div className="icon-box">
+                <ion-icon name="mail-outline" />
+              </div>
+              <div className="contact-info">
+                <p className="contact-title">Email</p>
+                <a href="mailto:monmoyzx@gmail.com" className="contact-link hov-yellow">
+                  monmoyzx@gmail.com
+                </a>
+              </div>
+            </li>
+
+            <li className="contact-item">
+              <div className="icon-box">
+                <ion-icon name="phone-portrait-outline" />
+              </div>
+              <div className="contact-info">
+                <p className="contact-title">Phone</p>
+                <a href="tel:+8801868983398" className="contact-link hov-yellow">
+                  +880 1868-983398
+                </a>
+              </div>
+            </li>
+          </ul>
+
+          <div className="separator" />
+
+          <ul className="social-list">
+            {socials.map(({ title, href, Icon }) => (
+              <li key={title} className="social-item">
+                <a title={title} href={href} target="_blank" rel="noreferrer" className="social-link">
+                  <Icon />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </aside>
   )

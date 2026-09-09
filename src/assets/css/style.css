@@ -626,16 +626,8 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
   overflow: hidden;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  will-change: max-height;
-  transition: max-height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.sidebar.active {
-  max-height: 380px;
+  transition: box-shadow var(--transition-1);
 }
 
 .sidebar-info {
@@ -863,14 +855,23 @@ main {
 }
 
 .sidebar-info_more {
+  display: grid;
+  grid-template-rows: 0fr;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.25s ease, visibility 0.25s ease;
+  transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.28s ease, visibility 0.28s ease;
+  will-change: grid-template-rows, opacity;
 }
 
 .sidebar.active .sidebar-info_more {
+  grid-template-rows: 1fr;
   opacity: 1;
   visibility: visible;
+}
+
+.sidebar-info_more-inner {
+  overflow: hidden;
+  min-height: 0;
 }
 
 .contacts-list {
@@ -2014,12 +2015,7 @@ article.about {
   /* SIDEBAR */
 
   .sidebar {
-    max-height: 180px;
     margin-bottom: 30px;
-  }
-
-  .sidebar.active {
-    max-height: 410px;
   }
 
   .sidebar-info {
@@ -2491,8 +2487,14 @@ article.about {
   }
 
   .sidebar-info_more {
+    display: block;
+    grid-template-rows: none;
     opacity: 1;
     visibility: visible;
+  }
+
+  .sidebar-info_more-inner {
+    overflow: visible;
   }
 
   .contacts-list {
