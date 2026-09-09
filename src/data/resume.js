@@ -1,6 +1,6 @@
 export const experiences = [
   {
-    title: "Game Developer Intern",
+    title: "AR / Game Developer Intern",
     date: "Aug 2026 - Present",
     org: "Battery Low Interactive Limited",
     bullets: [
@@ -48,6 +48,14 @@ export const leadership = [
       "Built and maintained a structured database of 200+ alumni profiles to support career placement and networking initiatives.",
     ],
   },
+  {
+    title: "Campus Ambassador",
+    date: "Jan 2026 - Present",
+    org: "BASIS Students’ Forum",
+    bullets: [
+      "Selected as Campus Ambassador to support student engagement initiatives, promoting BASIS programs to students through on-campus outreach.",
+    ],
+  },
 ];
 
 export const awards = [
@@ -93,13 +101,34 @@ export const certifications = [
   },
 ];
 
+export const skills = [
+  {
+    category: "Development",
+    items: ["HTML5", "CSS (Tailwind)", "JavaScript (React)", "PHP", "Figma", "Git", "GitHub"],
+  },
+  {
+    category: "Backend & Database",
+    items: ["Node.js", "REST APIs", "MySQL", "Firebase", "MongoDB"],
+  },
+  {
+    category: "Programming",
+    items: ["JavaScript", "Python", "Java", "C/C++"],
+  },
+  {
+    category: "Game Development",
+    items: ["Unity", "AR Mobile", "Vuforia", "C#"],
+  },
+];
+
 export const resumeData = {
   experiences,
   education,
   leadership,
   awards,
   certifications,
+  skills,
 };
 
 export default resumeData;
+
 

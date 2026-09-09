@@ -5,9 +5,28 @@ import {
   leadership,
   awards,
   certifications,
+  skills,
 } from "../../data/resume";
 
 // ── Icon components ─────────────────────────────────────────────────────────
+
+const SkillsIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
+    <polyline points="16 18 22 12 16 6" />
+    <polyline points="8 6 2 12 8 18" />
+  </svg>
+);
 
 const BriefcaseIcon = () => (
   <svg
@@ -206,6 +225,33 @@ export default function Resume() {
           />
         ))}
       </TimelineSection>
+
+      <div className="separator" />
+
+      {/* Skills & Technologies */}
+      <section className="timeline skills-section">
+        <div className="title-wrapper">
+          <div className="icon-box">
+            <SkillsIcon />
+          </div>
+          <h3 className="h3">Skills & Technologies</h3>
+        </div>
+
+        <div className="skills-grid">
+          {skills.map((group, index) => (
+            <div key={index} className="skill-card">
+              <h4 className="skill-card-title">{group.category}</h4>
+              <ul className="skill-tag-list">
+                {group.items.map((skill, idx) => (
+                  <li key={idx} className="skill-tag-pill">
+                    {skill}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <div className="separator" />
 
