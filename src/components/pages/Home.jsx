@@ -421,6 +421,46 @@ export default function Home({ setActivePage }) {
           />
         ))}
       </TimelineSection>
+
+      <div className="separator" />
+
+      {/* Contact Section */}
+      <section className="contact-banner-section">
+        <div className="contact-banner-card">
+          <div className="contact-banner-tag">
+            <span className="contact-tag-dot" />
+            <span>CONTACT</span>
+          </div>
+
+          <h3 className="contact-banner-title">
+            Let’s build something useful.
+          </h3>
+
+          <p className="contact-banner-text">
+            For internships, collaboration, or project discussions, reach me through email or LinkedIn.
+          </p>
+
+          <div className="contact-banner-actions">
+            <a
+              href="mailto:monmoyzx@gmail.com"
+              className="btn contact-btn-email"
+            >
+              <span>monmoyzx@gmail.com</span>
+              <span className="btn-arrow">↗</span>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/taher-mahmud-monmoy/"
+              target="_blank"
+              rel="noreferrer"
+              className="btn contact-btn-secondary"
+            >
+              <span>LinkedIn</span>
+              <span className="btn-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
     </article>
   )
 }
