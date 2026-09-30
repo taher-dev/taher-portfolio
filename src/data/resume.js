@@ -1,7 +1,7 @@
 export const experiences = [
   {
     title: "AR / Game Developer Intern",
-    date: "Aug 2026 - Present",
+    date: "Aug 2026 - Sep 2026",
     org: "Battery Low Interactive Limited",
     bullets: [
       "Developing Unity-based 3D games and AR projects, including an endless runner game with interactive gameplay mechanics.",
@@ -20,7 +20,7 @@ export const experiences = [
 export const education = [
   {
     title: "Bachelor of Science in Computer Science and Engineering",
-    date: "Oct 2022 - Present",
+    date: "Oct 2022 - Sep 2026",
     org: "Green University of Bangladesh",
     bullets: [
       "CGPA: 3.77/4.00",
