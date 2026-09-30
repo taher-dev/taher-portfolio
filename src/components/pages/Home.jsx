@@ -437,7 +437,7 @@ export default function Home({ setActivePage }) {
           </h3>
 
           <p className="contact-banner-text">
-            For internships, collaboration, or project discussions, reach me through email or LinkedIn.
+            For recruitment, collaboration, or project discussions, reach me through email or LinkedIn.
           </p>
 
           <div className="contact-banner-actions">
