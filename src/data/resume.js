@@ -4,13 +4,14 @@ export const experiences = [
     date: "Aug 2026 - Sep 2026",
     org: "Battery Low Interactive Limited",
     bullets: [
-      "Developing Unity-based 3D games and AR projects, including an endless runner game with interactive gameplay mechanics.",
+      "Developed an AR Interactive Portfolio using Unity, Vuforia, and C#, featuring image-target tracking, interactive project panels, and an AR Snake Game.",
+      "Worked on UI, scene management, AR interactions, testing, and debugging throughout the project."
     ],
   },
   {
     title: "Student Mentor",
     date: "Feb 2026 - May 2026",
-    org: "Department of Artificial Intelligence and Data Science,<br/>Green University of Bangladesh",
+    org: "Department of AI and Data Science,<br/>Green University of Bangladesh",
     bullets: [
       "Mentored 45+ first-year students, providing academic, personal, and career guidance to support a smooth transition into university life.",
     ],
