@@ -230,9 +230,7 @@ export default function Home({ setActivePage }) {
 
           <div className="hero-text">
             <p>
-              I’m Taher Mahmud Monmoy, a CSE student with hands-on experience in
-              web, mobile, and Unity game development. I’m currently focusing on AI driven
-              development while working as a AR / Game Developer Intern.
+              I’m Taher Mahmud Monmoy, a CSE graduate with experience in web, mobile, Unity AR and game development. I’m currently focused on AI-driven development while building projects across web applications, machine learning, and interactive experiences.
             </p>
           </div>
 

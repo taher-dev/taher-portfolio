@@ -23,7 +23,7 @@ export const education = [
     date: "Oct 2022 - Sep 2026",
     org: "Green University of Bangladesh",
     bullets: [
-      "CGPA: 3.77/4.00",
+      "CGPA: 3.78/4.00",
       "Fundamental Courses: ML, AI, Information System and Design, Cyber Security, Networking, Operating System, DSA, Object Oriented Programming, Database Management System, Computer Architecture, Web Programming.",
       "Additional Courses: Engineering Economics, Engineering Drawing.",
     ],
@@ -50,7 +50,7 @@ export const leadership = [
   },
   {
     title: "Campus Ambassador",
-    date: "Jan 2026 - Present",
+    date: "Jan 2026 - Sep 2026",
     org: "BASIS Students’ Forum",
     bullets: [
       "Selected as Campus Ambassador to support student engagement initiatives, promoting BASIS programs to students through on-campus outreach.",
@@ -115,8 +115,8 @@ export const skills = [
     items: ["JavaScript", "Python", "Java", "C/C++"],
   },
   {
-    category: "Game Development",
-    items: ["Unity", "AR Mobile", "Vuforia", "C#"],
+    category: "AR & Game Development",
+    items: ["Unity", "C#", "Vuforia", "AR Foundation"],
   },
 ];
 
