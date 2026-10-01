@@ -1,6 +1,10 @@
 import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
-const NAV_ITEMS = ['home', 'projects']
+const NAV_ITEMS = [
+  { name: 'Home', path: '/' },
+  { name: 'Projects', path: '/projects' },
+]
 
 // Moon icon (shown in dark mode → click to go light)
 const MoonIcon = () => (
@@ -16,7 +20,7 @@ const SunIcon = () => (
   </svg>
 )
 
-export default function Navbar({ activePage, setActivePage, lightMode, setLightMode }) {
+export default function Navbar({ lightMode, setLightMode }) {
   const [rotating, setRotating] = useState(false)
 
   const handleThemeToggle = () => {
@@ -27,23 +31,22 @@ export default function Navbar({ activePage, setActivePage, lightMode, setLightM
   return (
     <nav className="navbar">
       <ul className="navbar-list">
-        {NAV_ITEMS.map(page => (
-          <li key={page} className="navbar-item">
-            <button
-              className={`navbar-link${activePage === page ? ' active' : ''}`}
-              onClick={() => {
-                setActivePage(page)
-                window.scrollTo(0, 0)
-              }}
+        {NAV_ITEMS.map(item => (
+          <li key={item.path} className="navbar-item">
+            <NavLink
+              to={item.path}
+              end={item.path === '/'}
+              className={({ isActive }) => `navbar-link${isActive ? ' active' : ''}`}
             >
-              {page.charAt(0).toUpperCase() + page.slice(1)}
-            </button>
+              {item.name}
+            </NavLink>
           </li>
         ))}
       </ul>
 
       <div className="navbar-theme-wrapper">
         <button
+          type="button"
           id="theme-toggle"
           onClick={handleThemeToggle}
           className={`navbar-link${rotating ? ' rotate-icon' : ''}`}
@@ -56,3 +59,4 @@ export default function Navbar({ activePage, setActivePage, lightMode, setLightM
     </nav>
   )
 }
+

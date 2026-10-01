@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import arrowicon from '../../assets/images/icon-top-right-arrow-light.svg'
 import {
   experiences,
@@ -215,7 +216,7 @@ function TimelineCertItem({ title, date, issuer, credUrl }) {
 
 // ── Home page (Merged About + Resume) ─────────────────────────────────────────
 
-export default function Home({ setActivePage }) {
+export default function Home() {
   const latestProjects = [...projects].reverse().slice(0, 3)
 
   return (
@@ -315,21 +316,15 @@ export default function Home({ setActivePage }) {
         </ul>
 
         <div className="latest-projects-btn-wrapper">
-          <button
-            type="button"
+          <Link
+            to="/projects"
             className="btn btn-secondary btn-shiny"
-            onClick={() => {
-              if (setActivePage) {
-                setActivePage('projects')
-              }
-              window.scrollTo({ top: 0, behavior: 'smooth' })
-            }}
           >
             <span className="shiny-text">
               <span>All Projects</span>
               <span className="btn-arrow">→</span>
             </span>
-          </button>
+          </Link>
         </div>
       </section>
 

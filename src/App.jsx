@@ -1,18 +1,14 @@
 import { useState, useEffect } from 'react'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import SiteBackground from './components/Background/SiteBackground'
 import Sidebar from './components/Sidebar/Sidebar'
 import Navbar from './components/Navbar/Navbar'
 import Home from './components/pages/Home'
 import Portfolio from './components/pages/Portfolio'
-
-const PAGES = {
-  home: Home,
-  portfolio: Portfolio,
-  projects: Portfolio,
-}
+import Resume from './components/pages/Resume'
+import ScrollToTop from './components/ScrollToTop'
 
 export default function App() {
-  const [activePage, setActivePage] = useState('home')
   const [lightMode, setLightMode] = useState(false)
 
   // Sync light mode class whenever toggled
@@ -24,23 +20,28 @@ export default function App() {
     }
   }, [lightMode])
 
-  const PageComponent = PAGES[activePage]
-
   return (
     <>
+      <ScrollToTop />
       <SiteBackground />
       <main>
         <Sidebar />
         <div className="main-content">
           <Navbar
-            activePage={activePage}
-            setActivePage={setActivePage}
             lightMode={lightMode}
             setLightMode={setLightMode}
           />
-          <PageComponent setActivePage={setActivePage} />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Portfolio />} />
+            <Route path="/portfolio" element={<Navigate to="/projects" replace />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/about" element={<Navigate to="/" replace />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
         </div>
       </main>
     </>
   )
 }
+

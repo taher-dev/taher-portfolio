@@ -1,4 +1,4 @@
-export default function About({ setActivePage }) {
+export default function About() {
   return (
     <article className="about active" data-page="about">
       <section className="hero-section">
