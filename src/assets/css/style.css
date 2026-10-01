@@ -233,31 +233,31 @@
   }
 
   .contact-btn-email {
-    background: #ffffff;
-    color: var(--white-2);
-    border: 1px solid rgba(0, 0, 0, 0.14);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    background: hsl(0, 0%, 12%);
+    color: #ffffff;
+    border: 1px solid hsl(0, 0%, 12%);
+    box-shadow: none;
   }
 
   .contact-btn-email:hover {
-    background: hsl(45, 95%, 90%);
+    background: hsl(0, 0%, 22%);
     border-color: var(--orange-yellow-crayola);
-    color: hsl(0, 0%, 5%);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
   }
 
   .contact-btn-secondary {
-    background: rgba(0, 0, 0, 0.04);
-    border-color: rgba(0, 0, 0, 0.12);
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.12);
     color: var(--white-2);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    box-shadow: none;
   }
 
   .contact-btn-secondary:hover {
-    background: rgba(0, 0, 0, 0.08);
-    border-color: rgba(0, 0, 0, 0.22);
+    background: rgba(0, 0, 0, 0.09);
+    border-color: rgba(0, 0, 0, 0.25);
     color: hsl(0, 0%, 0%);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
   }
 
   .filter-select {
@@ -1980,7 +1980,7 @@ article.about {
   font-size: 14px;
   font-weight: 600;
   font-family: var(--ff-poppins);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  box-shadow: none;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -1988,14 +1988,16 @@ article.about {
   transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1),
     background 0.15s ease,
     box-shadow 0.15s ease,
-    border-color 0.15s ease;
+    border-color 0.15s ease,
+    color 0.15s ease;
 }
 
 .contact-btn-email:hover {
   transform: translateY(-2px);
   background: hsl(45, 95%, 90%);
-  border-color: rgba(255, 255, 255, 0.6);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  border-color: var(--orange-yellow-crayola);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  color: hsl(0, 0%, 5%);
 }
 
 .contact-btn-email .btn-arrow {
@@ -2019,7 +2021,7 @@ article.about {
   font-size: 14px;
   font-weight: 600;
   font-family: var(--ff-poppins);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  box-shadow: none;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -2027,7 +2029,8 @@ article.about {
   transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1),
     background 0.15s ease,
     box-shadow 0.15s ease,
-    border-color 0.15s ease;
+    border-color 0.15s ease,
+    color 0.15s ease;
 }
 
 .contact-btn-secondary:hover {
