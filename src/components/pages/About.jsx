@@ -5,14 +5,14 @@ export default function About() {
         <div className="hero-copy">
           <h1 className="hero-title">
             Building software across{' '}
-            <em>web, mobile, AR, and games.</em>
+            <em>web, mobile, and AR.</em>
           </h1>
 
           <div className="hero-text">
             <p>
-              I’m Taher Mahmud Monmoy, a CSE student with hands-on experience in
-              web, mobile, and Unity game development. I’m currently focusing on AI driven
-              development while working as a AR / Game Developer Intern.
+              I’m Taher Mahmud Monmoy, a CSE graduate with experience in web,
+              mobile, and Unity AR development. I’m currently focused on AI-driven
+              development while working as an AR Developer Intern.
             </p>
           </div>
 

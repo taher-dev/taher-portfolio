@@ -1,6 +1,6 @@
 export const experiences = [
   {
-    title: "AR / Game Developer Intern",
+    title: "AR Developer Intern",
     date: "Aug 2026 - Sep 2026",
     org: "Battery Low Interactive Limited",
     bullets: [
@@ -116,7 +116,7 @@ export const skills = [
     items: ["JavaScript", "Python", "Java", "C/C++"],
   },
   {
-    category: "AR & Game Development",
+    category: "AR Development",
     items: ["Unity", "C#", "Vuforia", "AR Foundation"],
   },
 ];
