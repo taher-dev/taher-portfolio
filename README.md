@@ -56,7 +56,7 @@ taher-portfolio/
 ├── public/
 │   └── assets/
 │       └── docs/
-│           └── Taher_Mahmud_Monmoy_Public_CV.pdf   # stable URL, linked directly in JSX
+│           └── Taher Mahmud Monmoy CV.pdf   # stable URL, linked directly in JSX
 ├── src/
 │   ├── assets/
 │   │   ├── css/

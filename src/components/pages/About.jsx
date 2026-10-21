@@ -18,7 +18,7 @@ export default function About() {
 
           <div className="hero-actions">
             <a
-              href="/assets/docs/Taher_Mahmud_Monmoy_Public_CV.pdf"
+              href="/assets/docs/Taher Mahmud Monmoy CV.pdf"
               target="_blank"
               rel="noreferrer"
               className="btn btn-secondary btn-shiny"

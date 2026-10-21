@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { createPortal } from 'react-dom'
-import avatarImg from '../../assets/images/taher-mahmud.jpeg'
+import avatarImg from '../../assets/images/taher-mahmud.webp'
 
 export default function ProfileModal() {
   const [open, setOpen] = useState(false)

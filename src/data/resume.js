@@ -7,6 +7,11 @@ export const experiences = [
       "Developed an AR Interactive Portfolio using Unity, Vuforia, and C#, featuring image-target tracking, interactive project panels, and an AR Snake Game.",
       "Worked on UI, scene management, AR interactions, testing, and debugging throughout the project."
     ],
+    demoVideo: {
+      title: "AR Interactive Portfolio - Project Demo",
+      url: "https://youtube.com/shorts/Wg_be5DmxXs?feature=share", // Replace with your unlisted YouTube video URL
+      buttonText: "View Project Demo",
+    },
   },
   {
     title: "Student Mentor",

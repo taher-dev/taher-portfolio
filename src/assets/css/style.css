@@ -828,6 +828,8 @@ main {
   z-index: 20;
   pointer-events: none;
   visibility: hidden;
+  padding: 20px 12px;
+  box-sizing: border-box;
 }
 
 .modal-container.active {
@@ -868,6 +870,7 @@ main {
   opacity: 0;
   transition: var(--transition-1);
   z-index: 2;
+  margin: auto;
 }
 
 .modal-container.active .profile-modal {
@@ -3074,5 +3077,177 @@ article.about {
   .hero-image-wrap img {
     transition: none !important;
     transform: none !important;
+  }
+}
+
+/*-----------------------------------*\
+    #VIDEO DEMO MODAL & BUTTON
+\*-----------------------------------*/
+
+.timeline-action-wrap {
+  margin-top: 14px;
+}
+
+.timeline-demo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 15px;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: var(--fw-500);
+  color: var(--white-2);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+  transition: all var(--transition-1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-demo-btn svg {
+  color: var(--orange-yellow-crayola);
+  transition: transform var(--transition-1);
+}
+
+.timeline-demo-btn:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.06) 100%);
+  border-color: var(--orange-yellow-crayola);
+  color: var(--orange-yellow-crayola);
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.timeline-demo-btn:hover svg {
+  transform: scale(1.15);
+}
+
+.lightmode .timeline-demo-btn {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.12);
+  color: var(--white-1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.lightmode .timeline-demo-btn:hover {
+  background: rgba(0, 0, 0, 0.08);
+  border-color: var(--orange-yellow-crayola);
+  color: var(--orange-yellow-crayola);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Video Modal */
+.profile-modal.video-modal {
+  width: min(92vw, calc(80vh * 16 / 9 + 44px), 860px);
+  max-width: 860px;
+  padding: 22px;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.video-modal-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+  padding-right: 44px;
+}
+
+.video-modal-title {
+  color: var(--white-1);
+  font-size: 16px;
+  font-weight: var(--fw-600);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.video-modal-player-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.video-modal-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-modal-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: var(--light-gray);
+  font-size: 14px;
+}
+
+/* Vertical / Shorts 9:16 Format */
+.profile-modal.video-modal.is-vertical {
+  width: min(92vw, calc(74vh * 9 / 16 + 32px), 390px);
+  max-width: 390px;
+  padding: 16px;
+  border-radius: 20px;
+}
+
+.profile-modal.video-modal.is-vertical .video-modal-header {
+  margin-bottom: 12px;
+  padding-right: 40px;
+}
+
+.profile-modal.video-modal.is-vertical .video-modal-title {
+  font-size: 14.5px;
+}
+
+.profile-modal.video-modal.is-vertical .modal-close-btn {
+  top: 12px;
+  right: 12px;
+  width: 30px;
+  height: 30px;
+  font-size: 17px;
+}
+
+.video-modal-player-wrap.is-vertical {
+  aspect-ratio: 9 / 16;
+  max-height: 74vh;
+  width: 100%;
+  border-radius: 14px;
+}
+
+@media (max-width: 580px) {
+  .profile-modal.video-modal {
+    padding: 16px;
+    border-radius: 16px;
+  }
+  .video-modal-title {
+    font-size: 15px;
+  }
+
+  .profile-modal.video-modal.is-vertical {
+    width: min(94vw, calc(76vh * 9 / 16 + 24px), 360px);
+    padding: 12px;
+    border-radius: 18px;
+  }
+
+  .profile-modal.video-modal.is-vertical .video-modal-header {
+    margin-bottom: 10px;
+    padding-right: 36px;
+  }
+
+  .profile-modal.video-modal.is-vertical .video-modal-title {
+    font-size: 13.5px;
+  }
+
+  .video-modal-player-wrap.is-vertical {
+    border-radius: 12px;
+    max-height: 76vh;
   }
 }

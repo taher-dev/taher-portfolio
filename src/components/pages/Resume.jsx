@@ -1,4 +1,6 @@
+import { useState } from "react";
 import arrowicon from "../../assets/images/icon-top-right-arrow-light.svg";
+import VideoModal from "../Modal/VideoModal";
 import {
   experiences,
   education,
@@ -136,8 +138,28 @@ function TimelineSection({ icon, title, children }) {
   );
 }
 
+const PlayIcon = () => (
+  <svg
+    viewBox="0 0 24 24"
+    width="13"
+    height="13"
+    fill="currentColor"
+    aria-hidden="true"
+    style={{ flexShrink: 0 }}
+  >
+    <path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11-6.86a1 1 0 0 0 0-1.72l-11-6.86A1 1 0 0 0 8 5.14z" />
+  </svg>
+);
+
 // A timeline item with date positioned above title
-function TimelineItem({ title, date, org, bullets }) {
+function TimelineItem({ title, date, org, bullets, demoVideo }) {
+  const [demoOpen, setDemoOpen] = useState(false);
+  const videoData = demoVideo
+    ? typeof demoVideo === "string"
+      ? { url: demoVideo }
+      : demoVideo
+    : null;
+
   return (
     <li className="timeline-item">
       {date && <div className="timeline-date">{date}</div>}
@@ -151,6 +173,25 @@ function TimelineItem({ title, date, org, bullets }) {
             <li key={i}>{b}</li>
           ))}
         </ul>
+      )}
+      {videoData?.url && (
+        <div className="timeline-action-wrap">
+          <button
+            type="button"
+            className="timeline-demo-btn"
+            onClick={() => setDemoOpen(true)}
+          >
+            <PlayIcon />
+            <span>{videoData.buttonText || "View Project Demo"}</span>
+          </button>
+          <VideoModal
+            isOpen={demoOpen}
+            onClose={() => setDemoOpen(false)}
+            videoUrl={videoData.url}
+            title={videoData.title || `${title} - Demo`}
+            isVertical={videoData.isVertical}
+          />
+        </div>
       )}
     </li>
   );
@@ -204,7 +245,7 @@ export default function Resume() {
 
       <div className="shine-btn-wrapper">
         <a
-          href="/assets/docs/Taher_Mahmud_Monmoy_Public_CV.pdf"
+          href="/assets/docs/Taher Mahmud Monmoy CV.pdf"
           target="_blank"
           rel="noreferrer"
           className="btn-shine"
@@ -222,6 +263,7 @@ export default function Resume() {
             date={item.date}
             org={item.org}
             bullets={item.bullets}
+            demoVideo={item.demoVideo}
           />
         ))}
       </TimelineSection>
