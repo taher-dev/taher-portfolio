@@ -10,7 +10,7 @@ export default function About() {
 
           <div className="hero-text">
             <p>
-              I’m Taher Mahmud Monmoy, a CSE graduate with experience in web,
+              I’m Taher Mahmud Monmoy (Monmoy), a CSE graduate with experience in web,
               mobile, and Unity AR development. I’m currently focused on AI-driven
               development while working as an AR Developer Intern.
             </p>

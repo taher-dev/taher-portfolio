@@ -11,7 +11,7 @@ export default function ProfileModal() {
       <figure className="avatar-box" onClick={() => setOpen(true)}>
         <img
           src={avatarImg}
-          alt="Taher Mahmud"
+          alt="Taher Mahmud Monmoy (Monmoy)"
           width="80"
         />
       </figure>
@@ -35,7 +35,7 @@ export default function ProfileModal() {
 
             <div className="modal-img-wrapper">
               <figure className="modal-avatar-box">
-                <img src={avatarImg} alt="Taher Mahmud" />
+                <img src={avatarImg} alt="Taher Mahmud Monmoy (Monmoy)" />
               </figure>
             </div>
           </section>

@@ -56,7 +56,7 @@ export default function Sidebar() {
         <ProfileModal />
 
         <div className="info-content">
-          <h1 className="name" title="Taher Mahmud Monmoy">Taher Mahmud Monmoy</h1>
+          <h1 className="name" title="Taher Mahmud Monmoy (Monmoy)">Taher Mahmud Monmoy</h1>
           <p className="title">Software Developer</p>
         </div>
 

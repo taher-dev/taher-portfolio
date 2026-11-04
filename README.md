@@ -2,15 +2,15 @@
 
 # Taher Portfolio Website - React ✨
 
-Live Website: [https://taher-portfolio.pages.dev](https://taher-portfolio.pages.dev)
+Live Website: [https://monmoy.pages.dev](https://monmoy.pages.dev)
 
 ## 📷 Preview
 
-<img alt="taher-portfolio.pages.dev Home Page" src="./src/assets/images/readme/mockup-1.png" width="100%">
-<img alt="taher-portfolio.pages.dev Resume Page" src="./src/assets/images/readme/mockup-2.png" width="100%">
-<img alt="taher-portfolio.pages.dev Portfolio Page" src="./src/assets/images/readme/mockup-3.png" width="100%">
-<img alt="taher-portfolio.pages.dev Tablet View" src="./src/assets/images/readme/mockup-4.png" width="100%">
-<img alt="taher-portfolio.pages.dev Mobile View" src="./src/assets/images/readme/mockup-5.png" width="100%">
+<img alt="monmoy.pages.dev Home Page" src="./src/assets/images/readme/mockup-1.png" width="100%">
+<img alt="monmoy.pages.dev Resume Page" src="./src/assets/images/readme/mockup-2.png" width="100%">
+<img alt="monmoy.pages.dev Portfolio Page" src="./src/assets/images/readme/mockup-3.png" width="100%">
+<img alt="monmoy.pages.dev Tablet View" src="./src/assets/images/readme/mockup-4.png" width="100%">
+<img alt="monmoy.pages.dev Mobile View" src="./src/assets/images/readme/mockup-5.png" width="100%">
 
 - Minimal design with subtle animations.
 - Migrated from vanilla JS to **React + Vite** for a component-based architecture.
